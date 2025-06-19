@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { Upload, Type, Download, Trash2, Eye, EyeOff, Copy, RefreshCw, Layers, Palette, Text, RotateCcw, ChevronDown, Move } from 'lucide-react';
+import ClarityAnalytics from './ClarityAnalytics';
 
 const ImageTextEditor = () => {
   const [originalImage, setOriginalImage] = useState(null);
@@ -592,6 +593,7 @@ const ImageTextEditor = () => {
 
   return (
     <div className="flex flex-col h-screen w-screen bg-gray-900 text-white font-sans">
+      <ClarityAnalytics clarityProjectId="s23euahv3w" />{" "}
       <header className="flex items-center justify-center px-4 py-4 border-b border-gray-700">
         <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
         BehindText
