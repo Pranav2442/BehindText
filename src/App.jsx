@@ -594,10 +594,14 @@ const ImageTextEditor = () => {
   return (
     <div className="flex flex-col h-screen w-screen bg-gray-900 text-white font-sans">
       <ClarityAnalytics clarityProjectId="s23euahv3w" />{" "}
-      <header className="flex items-center justify-center px-4 py-4 border-b border-gray-700">
-        <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
-        BehindText
-        </h1>
+      <header className="relative flex items-center justify-center px-4 py-3 bg-gray-900/50 backdrop-blur-sm shadow-lg shadow-black/20 z-50">
+        <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-purple-500 to-transparent"></div>
+        <div className="flex items-center gap-4">
+          <Layers size={36} className="text-cyan-400" />
+          <h1 className="text-4xl font-bold tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
+            BehindText
+          </h1>
+        </div>
       </header>
 
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4 lg:pb-4 pb-[80px]">
